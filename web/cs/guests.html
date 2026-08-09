@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pro hosty — ANDE 1403 · Batumi</title>
+<meta name="description" content="Chráněná sekce pro ubytované hosty apartmánu ANDE.">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="cs" href="../cs/guests.html">
+<link rel="alternate" hreflang="pl" href="../pl/guests.html">
+<link rel="alternate" hreflang="ru" href="../ru/guests.html">
+<link rel="alternate" hreflang="ka" href="../ka/guests.html">
+<link rel="alternate" hreflang="he" href="../he/guests.html">
+<link rel="alternate" hreflang="x-default" href="../cs/guests.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">ANDE 1403 <em>·</em> Batumi</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html">Úvod</a>
+      <a href="gallery.html">Galerie</a>
+      <a href="tips.html">Okolí a tipy</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="guests.html" aria-current="page">Pro hosty</a>
+      <div class="lang">
+        <a href="../cs/guests.html" aria-current="true">cs</a>
+        <a href="../pl/guests.html">pl</a>
+        <a href="../ru/guests.html">ru</a>
+        <a href="../ka/guests.html">ka</a>
+        <a href="../he/guests.html">he</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">Pro hosty</p>
+      <h1>Vítejte doma</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form id="gate" class="gate">
+        <p>Tato část je určena našim hostům.<br>Zadejte prosím heslo, které jste od nás dostali.</p>
+        <input type="password" name="password" autocomplete="off" placeholder="Heslo" required>
+        <button class="btn" type="submit">Vstoupit</button>
+        <p class="gate-error" hidden>Heslo nesedí — zkuste to prosím znovu, nebo nám napište.</p>
+        <noscript><p class="gate-error">Pro vstup do sekce pro hosty je potřeba zapnutý JavaScript.</p></noscript>
+      </form>
+
+      <div id="guest-area" hidden></div>
+
+      <template id="guest-template">
+        <section class="room">
+          <h2>Průvodce bytem</h2>
+          <p class="lead">Co kde najdete — po místnostech.</p>
+          <!-- TODO: doplnit skutečný obsah skřínek a zásuvek -->
+          <div class="room">
+            <h3>Kuchyň</h3>
+            <table class="table-list">
+              <tr><th>Horní skřínky</th><td>Nádobí, sklenice, hrnky — doplníme</td></tr>
+              <tr><th>Zásuvky u linky</th><td>Příbory, kuchyňské náčiní — doplníme</td></tr>
+              <tr><th>Spodní skřínky</th><td>Hrnce, pánve, spotřebiče — doplníme</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Obývací pokoj</h3>
+            <table class="table-list">
+              <tr><th>Komoda</th><td>Doplníme</td></tr>
+              <tr><th>Skříň</th><td>Doplníme</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Ložnice</h3>
+            <table class="table-list">
+              <tr><th>Šatní skříň</th><td>Povlečení, deky, ramínka — doplníme</td></tr>
+              <tr><th>Noční stolky</th><td>Doplníme</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Koupelna a předsíň</h3>
+            <table class="table-list">
+              <tr><th>Skříňka v koupelně</th><td>Ručníky, fén, drogerie — doplníme</td></tr>
+              <tr><th>Předsíň</th><td>Žehlička, sušák, úklid — doplníme</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Návody ke spotřebičům</h2>
+          <!-- TODO: doplnit stručné návody, případně odkazy na PDF manuály -->
+          <div class="grid cols-3">
+            <div class="card"><h3>Klimatizace</h3><p>Návod doplníme.</p></div>
+            <div class="card"><h3>Pračka</h3><p>Návod doplníme.</p></div>
+            <div class="card"><h3>Televize</h3><p>Návod doplníme.</p></div>
+            <div class="card"><h3>Bojler</h3><p>Návod doplníme.</p></div>
+            <div class="card"><h3>Trouba a deska</h3><p>Návod doplníme.</p></div>
+            <div class="card"><h3>Wi-Fi router</h3><p>Návod doplníme.</p></div>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Praktické informace</h2>
+          <div class="grid cols-2">
+            <div class="card">
+              <h3>Wi-Fi</h3>
+              <p>Síť: <em>doplníme</em><br>Heslo: <em>doplníme</em></p>
+            </div>
+            <div class="card">
+              <h3>Příjezd a odjezd</h3>
+              <p>Byt č. <strong>1403</strong> ve 14. patře — ve výtahu tlačítko 14.<br>
+              Check-in / check-out a předání klíčů — doplníme.</p>
+            </div>
+            <div class="card">
+              <h3>Odpad</h3>
+              <p>Kam s odpadky — doplníme.</p>
+            </div>
+            <div class="card">
+              <h3>Důležitá čísla</h3>
+              <p>Tísňová linka v Gruzii: <strong>112</strong><br>Náš kontakt: <em>doplníme</em></p>
+            </div>
+          </div>
+          <p class="notice" style="margin-top:20px">Domovní pravidla: byt je nekuřácký. Další pravidla doplníme.</p>
+        </section>
+      </template>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 ANDE 1403 · Batumi</span>
+    <div class="lang">
+      <a href="../cs/guests.html" aria-current="true">cs</a>
+      <a href="../pl/guests.html">pl</a>
+      <a href="../ru/guests.html">ru</a>
+      <a href="../ka/guests.html">ka</a>
+      <a href="../he/guests.html">he</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

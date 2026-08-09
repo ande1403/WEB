@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dla gości — ANDE 1403 · Batumi</title>
+<meta name="description" content="Chroniona sekcja dla gości apartamentu ANDE.">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="cs" href="../cs/guests.html">
+<link rel="alternate" hreflang="pl" href="../pl/guests.html">
+<link rel="alternate" hreflang="ru" href="../ru/guests.html">
+<link rel="alternate" hreflang="ka" href="../ka/guests.html">
+<link rel="alternate" hreflang="he" href="../he/guests.html">
+<link rel="alternate" hreflang="x-default" href="../cs/guests.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">ANDE 1403 <em>·</em> Batumi</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html">Start</a>
+      <a href="gallery.html">Galeria</a>
+      <a href="tips.html">Okolica i porady</a>
+      <a href="contact.html">Kontakt</a>
+      <a href="guests.html" aria-current="page">Dla gości</a>
+      <div class="lang">
+        <a href="../cs/guests.html">cs</a>
+        <a href="../pl/guests.html" aria-current="true">pl</a>
+        <a href="../ru/guests.html">ru</a>
+        <a href="../ka/guests.html">ka</a>
+        <a href="../he/guests.html">he</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">Dla gości</p>
+      <h1>Witajcie w domu</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form id="gate" class="gate">
+        <p>Ta część jest przeznaczona dla naszych gości.<br>Wpiszcie hasło, które od nas otrzymaliście.</p>
+        <input type="password" name="password" autocomplete="off" placeholder="Hasło" required>
+        <button class="btn" type="submit">Wejdź</button>
+        <p class="gate-error" hidden>Hasło się nie zgadza — spróbujcie ponownie lub napiszcie do nas.</p>
+        <noscript><p class="gate-error">Aby wejść do sekcji dla gości, potrzebny jest włączony JavaScript.</p></noscript>
+      </form>
+
+      <div id="guest-area" hidden></div>
+
+      <template id="guest-template">
+        <section class="room">
+          <h2>Przewodnik po mieszkaniu</h2>
+          <p class="lead">Co gdzie znajdziecie — pokój po pokoju.</p>
+          <div class="room">
+            <h3>Kuchnia</h3>
+            <table class="table-list">
+              <tr><th>Górne szafki</th><td>Naczynia, szklanki, kubki — uzupełnimy</td></tr>
+              <tr><th>Szuflady przy blacie</th><td>Sztućce, przybory kuchenne — uzupełnimy</td></tr>
+              <tr><th>Dolne szafki</th><td>Garnki, patelnie, sprzęty — uzupełnimy</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Salon</h3>
+            <table class="table-list">
+              <tr><th>Komoda</th><td>Uzupełnimy</td></tr>
+              <tr><th>Szafa</th><td>Uzupełnimy</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Sypialnia</h3>
+            <table class="table-list">
+              <tr><th>Szafa</th><td>Pościel, koce, wieszaki — uzupełnimy</td></tr>
+              <tr><th>Szafki nocne</th><td>Uzupełnimy</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Łazienka i przedpokój</h3>
+            <table class="table-list">
+              <tr><th>Szafka w łazience</th><td>Ręczniki, suszarka, kosmetyki — uzupełnimy</td></tr>
+              <tr><th>Przedpokój</th><td>Żelazko, suszarka na pranie, sprzątanie — uzupełnimy</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Instrukcje obsługi</h2>
+          <div class="grid cols-3">
+            <div class="card"><h3>Klimatyzacja</h3><p>Instrukcję uzupełnimy.</p></div>
+            <div class="card"><h3>Pralka</h3><p>Instrukcję uzupełnimy.</p></div>
+            <div class="card"><h3>Telewizor</h3><p>Instrukcję uzupełnimy.</p></div>
+            <div class="card"><h3>Bojler</h3><p>Instrukcję uzupełnimy.</p></div>
+            <div class="card"><h3>Piekarnik i płyta</h3><p>Instrukcję uzupełnimy.</p></div>
+            <div class="card"><h3>Router Wi-Fi</h3><p>Instrukcję uzupełnimy.</p></div>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Informacje praktyczne</h2>
+          <div class="grid cols-2">
+            <div class="card">
+              <h3>Wi-Fi</h3>
+              <p>Sieć: <em>uzupełnimy</em><br>Hasło: <em>uzupełnimy</em></p>
+            </div>
+            <div class="card">
+              <h3>Przyjazd i wyjazd</h3>
+              <p>Mieszkanie nr <strong>1403</strong> na 14. piętrze — w windzie przycisk 14.<br>
+              Check-in / check-out i przekazanie kluczy — uzupełnimy.</p>
+            </div>
+            <div class="card">
+              <h3>Śmieci</h3>
+              <p>Gdzie wyrzucać odpady — uzupełnimy.</p>
+            </div>
+            <div class="card">
+              <h3>Ważne numery</h3>
+              <p>Numer alarmowy w Gruzji: <strong>112</strong><br>Nasz kontakt: <em>uzupełnimy</em></p>
+            </div>
+          </div>
+          <p class="notice" style="margin-top:20px">Zasady domowe: mieszkanie jest dla niepalących. Pozostałe zasady uzupełnimy.</p>
+        </section>
+      </template>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 ANDE 1403 · Batumi</span>
+    <div class="lang">
+      <a href="../cs/guests.html">cs</a>
+      <a href="../pl/guests.html" aria-current="true">pl</a>
+      <a href="../ru/guests.html">ru</a>
+      <a href="../ka/guests.html">ka</a>
+      <a href="../he/guests.html">he</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Гостям — ANDE 1403 · Батуми</title>
+<meta name="description" content="Защищённый раздел для гостей апартаментов ANDE.">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="cs" href="../cs/guests.html">
+<link rel="alternate" hreflang="pl" href="../pl/guests.html">
+<link rel="alternate" hreflang="ru" href="../ru/guests.html">
+<link rel="alternate" hreflang="ka" href="../ka/guests.html">
+<link rel="alternate" hreflang="he" href="../he/guests.html">
+<link rel="alternate" hreflang="x-default" href="../cs/guests.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">ANDE 1403 <em>·</em> Батуми</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Меню">☰</button>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="tips.html">Окрестности</a>
+      <a href="contact.html">Контакты</a>
+      <a href="guests.html" aria-current="page">Гостям</a>
+      <div class="lang">
+        <a href="../cs/guests.html">cs</a>
+        <a href="../pl/guests.html">pl</a>
+        <a href="../ru/guests.html" aria-current="true">ru</a>
+        <a href="../ka/guests.html">ka</a>
+        <a href="../he/guests.html">he</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">Гостям</p>
+      <h1>Добро пожаловать домой</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form id="gate" class="gate">
+        <p>Этот раздел предназначен для наших гостей.<br>Введите пароль, который вы от нас получили.</p>
+        <input type="password" name="password" autocomplete="off" placeholder="Пароль" required>
+        <button class="btn" type="submit">Войти</button>
+        <p class="gate-error" hidden>Пароль не подходит — попробуйте ещё раз или напишите нам.</p>
+        <noscript><p class="gate-error">Для входа в раздел для гостей необходим включённый JavaScript.</p></noscript>
+      </form>
+
+      <div id="guest-area" hidden></div>
+
+      <template id="guest-template">
+        <section class="room">
+          <h2>Путеводитель по квартире</h2>
+          <p class="lead">Что где лежит — по комнатам.</p>
+          <div class="room">
+            <h3>Кухня</h3>
+            <table class="table-list">
+              <tr><th>Верхние шкафы</th><td>Посуда, стаканы, кружки — добавим</td></tr>
+              <tr><th>Ящики у столешницы</th><td>Приборы, кухонная утварь — добавим</td></tr>
+              <tr><th>Нижние шкафы</th><td>Кастрюли, сковородки, техника — добавим</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Гостиная</h3>
+            <table class="table-list">
+              <tr><th>Комод</th><td>Добавим</td></tr>
+              <tr><th>Шкаф</th><td>Добавим</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Спальня</h3>
+            <table class="table-list">
+              <tr><th>Платяной шкаф</th><td>Постельное бельё, одеяла, вешалки — добавим</td></tr>
+              <tr><th>Тумбочки</th><td>Добавим</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Ванная и прихожая</h3>
+            <table class="table-list">
+              <tr><th>Шкафчик в ванной</th><td>Полотенца, фен, косметика — добавим</td></tr>
+              <tr><th>Прихожая</th><td>Утюг, сушилка, уборка — добавим</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Инструкции к технике</h2>
+          <div class="grid cols-3">
+            <div class="card"><h3>Кондиционер</h3><p>Инструкцию добавим.</p></div>
+            <div class="card"><h3>Стиральная машина</h3><p>Инструкцию добавим.</p></div>
+            <div class="card"><h3>Телевизор</h3><p>Инструкцию добавим.</p></div>
+            <div class="card"><h3>Бойлер</h3><p>Инструкцию добавим.</p></div>
+            <div class="card"><h3>Духовка и плита</h3><p>Инструкцию добавим.</p></div>
+            <div class="card"><h3>Wi-Fi роутер</h3><p>Инструкцию добавим.</p></div>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Практическая информация</h2>
+          <div class="grid cols-2">
+            <div class="card">
+              <h3>Wi-Fi</h3>
+              <p>Сеть: <em>добавим</em><br>Пароль: <em>добавим</em></p>
+            </div>
+            <div class="card">
+              <h3>Заезд и выезд</h3>
+              <p>Квартира № <strong>1403</strong> на 14-м этаже — в лифте кнопка 14.<br>
+              Check-in / check-out и передача ключей — добавим.</p>
+            </div>
+            <div class="card">
+              <h3>Мусор</h3>
+              <p>Куда выносить мусор — добавим.</p>
+            </div>
+            <div class="card">
+              <h3>Важные номера</h3>
+              <p>Экстренная служба в Грузии: <strong>112</strong><br>Наш контакт: <em>добавим</em></p>
+            </div>
+          </div>
+          <p class="notice" style="margin-top:20px">Правила дома: квартира для некурящих. Остальные правила добавим.</p>
+        </section>
+      </template>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 ANDE 1403 · Батуми</span>
+    <div class="lang">
+      <a href="../cs/guests.html">cs</a>
+      <a href="../pl/guests.html">pl</a>
+      <a href="../ru/guests.html" aria-current="true">ru</a>
+      <a href="../ka/guests.html">ka</a>
+      <a href="../he/guests.html">he</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
