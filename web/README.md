@@ -114,6 +114,15 @@ krytý tenisový kurt přímo v areálu domu + padelové kurty v okolí (ověře
 foto syna na kurtu). Text o poloze upraven z "pláž" na "moře" — bezprostřední pobřeží u
 domu po bouři nemá obnovenou pláž.
 
+## Branding (2026-08-14)
+
+Nasazený oficiální logo balíček (zlatá `#bd9850` / petrolejová `#0b4a55` / slonovina `#f8f3eb` —
+barvy skoro identické s tím, co web už používal). Favicon sada (`favicon.ico/.svg`, apple-touch,
+android-chrome, `site.webmanifest`) je v kořeni `web/`, logo SVG (`ANDE-1403-primary-outline.svg`,
+text převeden na křivky) je v `web/assets/img/brand/logo-primary.svg` a nahradilo textový nápis
+v hlavičce (`.brand-logo`) i patičce (`.footer-logo`) na všech stránkách ve všech 6 jazycích včetně
+kořenového rozcestníku. Přidán i `og:image`/`og:title` pro náhledy při sdílení odkazu.
+
 ## TODO před ostrým provozem
 
 - [ ] fotky u zbylých 3 highlight karet (Gomis Mta, zoo, cirkus) — zatím žádná vhodná nenalezena
@@ -122,4 +131,4 @@ domu po bouři nemá obnovenou pláž.
 - [ ] Wi-Fi a praktické info
 - [ ] vlastní doména
 - [ ] silnější ochrana sekce pro hosty (Cloudflare Access / StatiCrypt)
-- [ ] favicon a OG obrázek pro sdílení
+- [ ] anglický překlad stránky Okolí a tipy (119 položek) — fáze 2

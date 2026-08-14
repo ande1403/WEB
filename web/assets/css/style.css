@@ -90,6 +90,22 @@ a:hover { color: var(--accent); }
 
 .brand em { font-style: normal; color: var(--accent); }
 
+.brand-logo { display: inline-flex; align-items: center; }
+.brand-logo img { display: block; height: 36px; width: auto; }
+
+.footer-logo { display: inline-flex; align-items: center; }
+.footer-logo img { display: block; height: 24px; width: auto; opacity: .9; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 .nav { margin-inline-start: auto; display: flex; align-items: center; gap: 4px; }
 
 .nav a {
