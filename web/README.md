@@ -33,13 +33,14 @@ Změna hesla: v terminálu spusť `echo -n "NoveHeslo" | shasum -a 256` a výsle
 
 Stačí otevřít `index.html` v prohlížeči (dvojklik).
 
-## Nasazení (doporučeno: Cloudflare Pages)
+## Nasazení (živé: Cloudflare Workers)
 
-1. Založ účet na pages.cloudflare.com (zdarma).
-2. Nahraj složku `web/` (drag & drop v „Direct Upload", nebo přes Git).
-3. Web poběží na `neco.pages.dev`; vlastní doménu lze připojit v nastavení.
+Web běží na **https://ande1403.j-monski.workers.dev**, napojený na GitHub repozitář
+(`github.com/ande1403/WEB`, veřejný). Kořenový `wrangler.jsonc` říká Cloudflare, ať
+servíruje statické soubory ze složky `web/`. Po každém `git push` do `main` proběhne
+automatický deploy (`npx wrangler deploy` na pozadí, pár vteřin).
 
-Alternativa: Netlify Drop (app.netlify.com/drop) — přetáhneš složku a hotovo.
+Update webu: v Terminálu v projektové složce `git add -A && git commit -m "..." && git push`.
 
 ## Doplňování obsahu
 
@@ -61,13 +62,13 @@ Dvě úrovně obsahu:
 - **Zbylá místa** (kavárny, obchody, služby...) — kompaktní klikací řádek do mapy.
   Definované v `PLACES` / `CURATED`.
 
-Nad tímto generovaným blokem je ještě ručně vložená sekce **"Hned za rohem"**
-(blok `NEARBY:START..END`, hned za úvodní fotkou moře) — bezprostřední okolí domu:
-samoobsluha 24/7 v přízemí, supermarket Nikora, lékárna a drogerie, Mandarin Shawerma
-a Trattoria Zio přes ulici, Beer House u parku, Nový bulvár a park (dětské hřiště,
-venkovní posilovna) a autobusová zastávka — ověřené na Google Mapách. Skript
-`generate_places.py` tento blok nepřepisuje, je mimo rozsah jeho regexu — uprav ho
-ručně přímo v `tips.html` v každém jazyce.
+Sekce "Hned za rohem" (bezprostřední okolí domu) byla z `tips.html` odstraněna — stačí,
+že je stručně na úvodní stránce (karta "Poloha"), duplicita na tips stránce nedávala smysl.
+
+**2026-08-14 poznámka:** dorazil od uživatele audit/redesign balíček od jiného AI modelu
+s návrhem na velký přepracování stránky "Okolí a tipy" (příliš dlouhá, ploché kategorie,
+technické štítky). Uživatel souhlasí s diagnózou, ale chce hlubší revizi udělat později,
+až s časem — zatím žádná další strukturální změna tips stránky mimo odstranění NEARBY.
 
 ### Fotky u highlightů
 
@@ -89,14 +90,23 @@ Doplnění dalších fotek (chybějící 3 highlighty): pošli mi odkaz nebo fot
 
 ## Galerie apartmánu
 
-`web/{lang}/gallery.html` má 16 reálných fotek (`web/assets/img/*.webp`, dvě velikosti
+`web/{lang}/gallery.html` má 17 reálných fotek (`web/assets/img/*.webp`, dvě velikosti
 800/1600 přes `srcset`), seřazených podle logiky prohlídky: vchod se psem → vestibul →
-pohled na byt → sedačka (rozkládací) → jídelní kout → kávovar → prostřený stůl → kuchyň →
-ložnice → komoda/psací stůl → koupelna → sprcha → WC → výhled na moře z balkonu → západ
-slunce → hero foto. Text u galerie i karta "Vybavení" na úvodní stránce zmiňují, že
-pohovka v obýváku je rozkládací (+2 plnohodnotná spací místa) a byt má multisplit
-klimatizaci s nastavením teploty po místnostech. Nahrané fotky se zpracovávají ručně
-(oříznutí, převod do WebP) — pošli další a doplním stejným způsobem.
+pohled na byt → sedačka (rozkládací) → jídelní kout → kávovar → prostřený stůl a kuchyň →
+kuchyň → ložnice → komoda/psací stůl → koupelna → sprcha → WC → výhled na moře z balkonu →
+denní výhled → západ slunce → hero foto. Text u galerie i karta "Vybavení" na úvodní
+stránce zmiňují, že pohovka v obýváku je rozkládací (+2 plnohodnotná spací místa) a byt
+má multisplit klimatizaci s nastavením teploty po místnostech. Na úvodní stránce je pod
+hero fotkou tlačítko "Prohlédnout celou galerii →" pro rychlý přístup i bez menu. Nahrané
+fotky se zpracovávají ručně (oříznutí, převod do WebP) — pošli další a doplním stejným
+způsobem.
+
+**2026-08-14:** doplněny fotky od uživatele (denní výhled, koupelna 2×, prostřený stůl/
+kuchyň) a vlastní fotka bulváru nahradila Wikimedia fotku u highlightu "Batumský bulvár"
+(bez credit odkazu, je to rodinná fotka). Přidána karta "Aktivní pobyt" na úvodní stránku —
+krytý tenisový kurt přímo v areálu domu + padelové kurty v okolí (ověřeno uživatelem,
+foto syna na kurtu). Text o poloze upraven z "pláž" na "moře" — bezprostřední pobřeží u
+domu po bouři nemá obnovenou pláž.
 
 ## TODO před ostrým provozem
 

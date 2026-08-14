@@ -286,8 +286,7 @@ HIGHLIGHTS = [
 
   dict(id="boulevard", cat="sights",
     tag=N("Promenáda", "Promenada", "Променад", "ბულვარი", "טיילת"),
-    photo="boulevard.webp", credit="Sosotedrd", license="CC BY-SA 4.0",
-    credit_url="https://commons.wikimedia.org/wiki/File:Batumi_Boulevard_Alley_2.jpg",
+    photo="boulevard.webp",
     title=N("Batumský bulvár", "Bulwar w Batumi", "Батумский бульвар", "ბათუმის ბულვარი", "טיילת בטומי"),
     lead=N(
       "Sedmikilometrová přímořská promenáda podél oblázkové pláže — palmy, parky, cyklostezka i večerní fontány. Páteř města, kterou projdete pěšky, na kole nebo na koloběžce.",
@@ -543,8 +542,9 @@ def render_highlight(lang, h):
     out.append('          <div class="pc-body">')
     if photo:
         out.append(f'            <img class="pc-photo" src="../assets/img/places/{photo}" alt="{title}" loading="lazy" width="960" height="540">')
-        credit_txt = f'{CREDIT_LABEL[lang]}: {esc(h["credit"])}, {esc(h["license"])}, Wikimedia Commons'
-        out.append(f'            <a class="pc-credit" href="{html.escape(h["credit_url"])}" target="_blank" rel="noopener">{credit_txt}</a>')
+        if h.get("credit"):
+            credit_txt = f'{CREDIT_LABEL[lang]}: {esc(h["credit"])}, {esc(h["license"])}, Wikimedia Commons'
+            out.append(f'            <a class="pc-credit" href="{html.escape(h["credit_url"])}" target="_blank" rel="noopener">{credit_txt}</a>')
     out.append(f'            <p class="pc-lead">{esc(h["lead"][lang])}</p>')
     if h.get("stats"):
         out.append('            <div class="pc-stats">')
