@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>For guests — ANDE 1403 · Batumi</title>
+<meta name="description" content="Protected section for guests staying at the ANDE apartment.">
+<meta name="robots" content="noindex">
+<link rel="alternate" hreflang="cs" href="../cs/guests.html">
+<link rel="alternate" hreflang="pl" href="../pl/guests.html">
+<link rel="alternate" hreflang="ru" href="../ru/guests.html">
+<link rel="alternate" hreflang="ka" href="../ka/guests.html">
+<link rel="alternate" hreflang="he" href="../he/guests.html">
+<link rel="alternate" hreflang="en" href="../en/guests.html">
+<link rel="alternate" hreflang="x-default" href="../cs/guests.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@0,400;0,600;1,400&amp;family=Noto+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js" defer></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="index.html">ANDE 1403 <em>·</em> Batumi</a>
+    <button class="nav-toggle" aria-expanded="false" aria-label="Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="tips.html">Around &amp; tips</a>
+      <a href="contact.html">Contact</a>
+      <a href="guests.html" aria-current="page">For guests</a>
+      <div class="lang">
+        <a href="../cs/guests.html">cs</a>
+        <a href="../pl/guests.html">pl</a>
+        <a href="../ru/guests.html">ru</a>
+        <a href="../ka/guests.html">ka</a>
+        <a href="../he/guests.html">he</a>
+        <a href="../en/guests.html" aria-current="true">en</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap" style="text-align:center">
+      <p class="kicker">For guests</p>
+      <h1>Welcome home</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <form id="gate" class="gate">
+        <p>This section is for our guests.<br>Please enter the password we gave you.</p>
+        <input type="password" name="password" autocomplete="off" placeholder="Password" required>
+        <button class="btn" type="submit">Enter</button>
+        <p class="gate-error" hidden>Wrong password — please try again, or write to us.</p>
+        <noscript><p class="gate-error">JavaScript must be enabled to access the guest section.</p></noscript>
+      </form>
+
+      <div id="guest-area" hidden></div>
+
+      <template id="guest-template">
+        <section class="room">
+          <h2>Apartment guide</h2>
+          <p class="lead">What's where — room by room.</p>
+          <!-- TODO: add actual content of cabinets and drawers -->
+          <div class="room">
+            <h3>Kitchen</h3>
+            <table class="table-list">
+              <tr><th>Upper cabinets</th><td>Dishes, glasses, mugs — to be added</td></tr>
+              <tr><th>Drawers by the counter</th><td>Cutlery, kitchen tools — to be added</td></tr>
+              <tr><th>Lower cabinets</th><td>Pots, pans, appliances — to be added</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Living room</h3>
+            <table class="table-list">
+              <tr><th>Dresser</th><td>To be added</td></tr>
+              <tr><th>Wardrobe</th><td>To be added</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Bedroom</h3>
+            <table class="table-list">
+              <tr><th>Wardrobe</th><td>Bedding, blankets, hangers — to be added</td></tr>
+              <tr><th>Nightstands</th><td>To be added</td></tr>
+            </table>
+          </div>
+          <div class="room">
+            <h3>Bathroom and hallway</h3>
+            <table class="table-list">
+              <tr><th>Bathroom cabinet</th><td>Towels, hairdryer, toiletries — to be added</td></tr>
+              <tr><th>Hallway</th><td>Iron, drying rack, cleaning supplies — to be added</td></tr>
+            </table>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Appliance instructions</h2>
+          <!-- TODO: add brief instructions, or links to PDF manuals -->
+          <div class="grid cols-3">
+            <div class="card"><h3>Air conditioning</h3><p>Instructions to be added.</p></div>
+            <div class="card"><h3>Washing machine</h3><p>Instructions to be added.</p></div>
+            <div class="card"><h3>TV</h3><p>Instructions to be added.</p></div>
+            <div class="card"><h3>Boiler</h3><p>Instructions to be added.</p></div>
+            <div class="card"><h3>Oven and hob</h3><p>Instructions to be added.</p></div>
+            <div class="card"><h3>Wi-Fi router</h3><p>Instructions to be added.</p></div>
+          </div>
+        </section>
+
+        <section class="room">
+          <h2>Practical information</h2>
+          <div class="grid cols-2">
+            <div class="card">
+              <h3>Wi-Fi</h3>
+              <p>Network: <em>to be added</em><br>Password: <em>to be added</em></p>
+            </div>
+            <div class="card">
+              <h3>Arrival and departure</h3>
+              <p>Apartment no. <strong>1403</strong> on the 14th floor — press 14 in the elevator.<br>
+              Check-in / check-out and key handover — to be added.</p>
+            </div>
+            <div class="card">
+              <h3>Waste</h3>
+              <p>Where to take the trash — to be added.</p>
+            </div>
+            <div class="card">
+              <h3>Important numbers</h3>
+              <p>Emergency line in Georgia: <strong>112</strong><br>Our contact: <em>to be added</em></p>
+            </div>
+          </div>
+          <p class="notice" style="margin-top:20px">House rules: the apartment is non-smoking. Further rules to be added.</p>
+        </section>
+      </template>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 ANDE 1403 · Batumi</span>
+    <div class="lang">
+      <a href="../cs/guests.html">cs</a>
+      <a href="../pl/guests.html">pl</a>
+      <a href="../ru/guests.html">ru</a>
+      <a href="../ka/guests.html">ka</a>
+      <a href="../he/guests.html">he</a>
+      <a href="../en/guests.html" aria-current="true">en</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

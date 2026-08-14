@@ -10,7 +10,7 @@ web/
 ├── assets/
 │   ├── css/style.css   sdílený styl (světlý, prémiový, RTL-ready)
 │   └── js/main.js      mobilní menu + brána pro hosty
-├── cs/ pl/ ru/ ka/ he/ jazykové verze, v každé:
+├── cs/ pl/ ru/ ka/ he/ en/ jazykové verze, v každé:
 │   ├── index.html      úvod
 │   ├── gallery.html    galerie — 16 reálných fotek apartmánu a domu
 │   ├── tips.html       okolí a tipy — editoriální styl, 17 bohatých karet (highlighty)
@@ -20,6 +20,12 @@ web/
 ```
 
 Hebrejská verze (`he/`) je plně RTL. Stejný název souboru = stejná stránka ve všech jazycích (přepínač jazyků jen mění složku).
+
+**2026-08-14:** přidána angličtina (`en/`) jako 6. jazyk — zatím jen `index.html`, `gallery.html`,
+`contact.html`, `guests.html`. `en/tips.html` je zatím jen placeholder (hero + mapa, bez 119
+přeložených položek) — plný překlad stránky Okolí a tipy je naplánovaný na samostatné kolo práce.
+Přepínač jazyků a `hreflang` byly doplněny o `en` na všech stránkách ve všech jazycích včetně
+kořenového rozcestníku `web/index.html`.
 
 ## Sekce pro hosty a heslo
 
