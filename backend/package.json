@@ -1,0 +1,24 @@
+{
+  "name": "ande1403-backend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "dryrun": "wrangler deploy --dry-run --outdir=.build",
+    "deploy": "wrangler deploy",
+    "db:init:local": "wrangler d1 execute ande1403 --local --file=./migrations/0001_init.sql",
+    "db:init:remote": "wrangler d1 execute ande1403 --remote --file=./migrations/0001_init.sql",
+    "sim": "vitest run test/e2e.test.ts"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250109.0",
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^26.2.0",
+    "better-sqlite3": "^11.7.0",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8",
+    "wrangler": "^3.99.0"
+  }
+}

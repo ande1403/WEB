@@ -2,3 +2,12 @@
 fotky/
 *.heic
 *.HEIC
+.secrets/
+
+# backend Worker
+backend/node_modules/
+backend/.build/
+backend/.wrangler/
+backend/.dev.vars
+_to_delete/
+*.tar.gz

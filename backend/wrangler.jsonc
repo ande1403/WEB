@@ -1,0 +1,62 @@
+{
+  // Backend Worker pro automatizaci rezervací ANDE 1403.
+  // POZOR: tohle NENÍ konfigurace webu — ta je v ../wrangler.jsonc (Worker "ande1403").
+  // Deploy tohoto Workeru: cd backend && npx wrangler deploy
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ande1403-backend",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-01-01",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+
+  "triggers": {
+    // Kontrola schránky každých 30 minut (stejná kadence jako původní Cowork task).
+    "crons": ["*/30 * * * *"]
+  },
+
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ande1403",
+      // TODO(manuál): doplnit po `npx wrangler d1 create ande1403`
+      "database_id": "PLACEHOLDER_DATABASE_ID"
+    }
+  ],
+
+  "vars": {
+    // Dokud je "1", Worker NIC neodešle a NIC nezapíše do kalendáře —
+    // jen spočítá, co by udělal, a zaloguje to do tabulky outbox.
+    "DRY_RUN": "1",
+
+    "TIMEZONE": "Asia/Tbilisi",
+
+    // Osobní adresy (OWNER_EMAIL, CLEANING_EMAILS) tu záměrně NEJSOU — repo je veřejné.
+    // Nastavují se jako secrets, viz seznam na konci souboru.
+    // MAILBOX_EMAIL a CALENDAR_ID veřejné být můžou: první je uvedený na webu jako kontakt,
+    // druhý je v embedu kalendáře na contact.html a sám o sobě ukáže jen volno/obsazeno.
+    "MAILBOX_EMAIL": "ande1403.batumi@gmail.com",
+    "CALENDAR_ID": "9d00d50df0487383053c1765f8d00b37f114974dafb9f2a4dcefafe4f52c26e9@group.calendar.google.com",
+    "HOLD_DAYS": "5",
+    "FOLLOWUP_BEFORE_EXPIRY_DAYS": "2",
+    "CLEANING_BLOCK_DAYS": "3",
+    "OPENAI_MODEL": "gpt-4.1-mini",
+    // Veřejná URL Workeru — používá se v odkazech "schválit / zamítnout" v e-mailu.
+    // TODO(manuál): po prvním deploy sem doplnit skutečnou workers.dev adresu.
+    "PUBLIC_BASE_URL": "https://ande1403-backend.j-monski.workers.dev"
+  },
+
+  "observability": {
+    "enabled": true
+  }
+
+  // Secrets (NIKDY sem, jen `npx wrangler secret put <NAME>`):
+  //   OWNER_EMAIL         (adresa majitele — kam chodí žádosti o schválení a hlášení)
+  //   CLEANING_EMAILS     (adresy pro avízo na úklid, oddělené čárkou)
+  //   GOOGLE_CLIENT_ID
+  //   GOOGLE_CLIENT_SECRET
+  //   GOOGLE_REFRESH_TOKEN
+  //   OPENAI_API_KEY
+  //   APPROVAL_SECRET     (náhodný řetězec, podepisuje schvalovací odkazy)
+  //   HEALTHCHECK_URL     (volitelné — URL, která se pingne po každém úspěšném běhu,
+  //                        např. z healthchecks.io; upozorní, když systém tiše zmlkne)
+}
