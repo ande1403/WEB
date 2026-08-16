@@ -74,6 +74,75 @@
       </div>
     </div>
   </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Napisz do nas</h2>
+      <p class="lead">Najszybszy sposób, żeby ustalić termin — wiadomość trafi bezpośrednio na naszą skrzynkę.</p>
+      <form class="contact-form" id="contactForm" style="margin-top:22px">
+        <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
+        <input type="hidden" name="subject" value="Nowa wiadomość ze strony ANDE 1403">
+        <input type="hidden" name="from_name" value="ANDE 1403 · strona">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div>
+          <label for="cf-name">Imię</label>
+          <input type="text" id="cf-name" name="name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="cf-email">E-mail</label>
+          <input type="email" id="cf-email" name="email" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="cf-message">Wiadomość</label>
+          <textarea id="cf-message" name="message" required placeholder="Termin pobytu, liczba osób i wszystko inne, co powinniśmy wiedzieć."></textarea>
+        </div>
+        <div>
+          <button class="btn" type="submit">Wyślij wiadomość</button>
+        </div>
+        <p class="form-status" id="formStatus" role="status"></p>
+      </form>
+      <script>
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          var form = e.target;
+          var status = document.getElementById('formStatus');
+          var btn = form.querySelector('button[type=submit]');
+          btn.disabled = true;
+          status.className = 'form-status';
+          status.textContent = '';
+          fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(Object.fromEntries(new FormData(form)))
+          }).then(function (r) { return r.json(); }).then(function (data) {
+            btn.disabled = false;
+            if (data.success) {
+              status.className = 'form-status ok';
+              status.textContent = 'Dziękujemy, wiadomość została wysłana! Odezwiemy się jak najszybciej.';
+              form.reset();
+            } else {
+              status.className = 'form-status err';
+              status.textContent = 'Coś poszło nie tak. Spróbuj ponownie albo napisz bezpośrednio na ande1403.batumi@gmail.com.';
+            }
+          }).catch(function () {
+            btn.disabled = false;
+            status.className = 'form-status err';
+            status.textContent = 'Coś poszło nie tak. Spróbuj ponownie albo napisz bezpośrednio na ande1403.batumi@gmail.com.';
+          });
+        });
+      </script>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <h2>Kiedy jest wolny termin</h2>
+      <p class="lead">Kolorowe dni są zajęte, pozostałe wolne — szczegóły rezerwacji (kto, ile osób) widzimy tylko my.</p>
+      <div class="map-embed" style="margin-top:18px">
+        <iframe src="https://calendar.google.com/calendar/embed?src=9d00d50df0487383053c1765f8d00b37f114974dafb9f2a4dcefafe4f52c26e9%40group.calendar.google.com&amp;ctz=Europe%2FPrague&amp;mode=MONTH&amp;showTitle=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0" style="border:0" width="100%" height="500" frameborder="0" scrolling="no" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
 </main>
 
 <footer class="footer">

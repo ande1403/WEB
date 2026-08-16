@@ -393,6 +393,40 @@ details.tip { display: block; }
 
 .gate-error { color: #a33d2e; font-size: .9rem; margin-block-start: 10px; }
 
+/* ---------- kontaktní formulář ---------- */
+.contact-form {
+  display: grid;
+  gap: 16px;
+  max-width: 560px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  font-size: .9rem;
+  margin-block-end: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font: inherit;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+
+.contact-form textarea { min-height: 130px; resize: vertical; }
+
+.form-status { margin-block-start: 14px; font-size: .95rem; display: none; }
+.form-status.ok { color: var(--accent-ink); display: block; }
+.form-status.err { color: #a33d2e; display: block; }
+
 .room { margin-block-end: 28px; }
 
 .table-list { width: 100%; border-collapse: collapse; font-size: .95rem; }
