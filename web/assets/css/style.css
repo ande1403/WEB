@@ -408,7 +408,8 @@ details.tip { display: block; }
 }
 
 .contact-form input,
-.contact-form textarea {
+.contact-form textarea,
+.contact-form select {
   width: 100%;
   font: inherit;
   padding: 11px 14px;
@@ -419,7 +420,8 @@ details.tip { display: block; }
 }
 
 .contact-form input:focus,
-.contact-form textarea:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
+.contact-form textarea:focus,
+.contact-form select:focus { outline: 2px solid var(--accent); border-color: var(--accent); }
 
 .contact-form textarea { min-height: 130px; resize: vertical; }
 

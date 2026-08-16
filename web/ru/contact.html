@@ -78,10 +78,9 @@
   <section class="section">
     <div class="wrap">
       <h2>Напишите нам</h2>
-      <p class="lead">Самый быстрый способ договориться о датах — сообщение придёт прямо к нам на почту.</p>
+      <p class="lead">Хотите узнать о свободных датах, задать вопрос или просто написать пару строк — сообщение придёт прямо к нам на почту.</p>
       <form class="contact-form" id="contactForm" style="margin-top:22px">
         <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
-        <input type="hidden" name="subject" value="Новое сообщение с сайта ANDE 1403">
         <input type="hidden" name="from_name" value="ANDE 1403 · сайт">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div>
@@ -93,8 +92,16 @@
           <input type="email" id="cf-email" name="email" autocomplete="email" required>
         </div>
         <div>
+          <label for="cf-subject">Тема сообщения</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="Бронирование – ANDE 1403">Бронирование</option>
+            <option value="Вопрос – ANDE 1403">Вопрос</option>
+            <option value="Другое – ANDE 1403">Другое</option>
+          </select>
+        </div>
+        <div>
           <label for="cf-message">Сообщение</label>
-          <textarea id="cf-message" name="message" required placeholder="Даты проживания, количество человек и всё остальное, что нам стоит знать."></textarea>
+          <textarea id="cf-message" name="message" required placeholder="Даты проживания, вопрос или всё остальное, что нам стоит знать."></textarea>
         </div>
         <div>
           <button class="btn" type="submit">Отправить сообщение</button>

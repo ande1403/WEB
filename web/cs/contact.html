@@ -79,10 +79,9 @@
   <section class="section">
     <div class="wrap">
       <h2>Napište nám</h2>
-      <p class="lead">Nejrychlejší cesta, jak se domluvit na termínu — zprávu dostaneme přímo do e-mailu.</p>
+      <p class="lead">Ať už chcete zjistit volný termín, na něco se zeptat, nebo nám jen napsat pár řádků — zpráva nám přijde přímo do e-mailu.</p>
       <form class="contact-form" id="contactForm" style="margin-top:22px">
         <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
-        <input type="hidden" name="subject" value="Nová zpráva z webu ANDE 1403">
         <input type="hidden" name="from_name" value="ANDE 1403 · web">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div>
@@ -94,8 +93,16 @@
           <input type="email" id="cf-email" name="email" autocomplete="email" required>
         </div>
         <div>
+          <label for="cf-subject">Téma zprávy</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="Rezervace pobytu – ANDE 1403">Rezervace pobytu</option>
+            <option value="Dotaz – ANDE 1403">Dotaz</option>
+            <option value="Jiné – ANDE 1403">Jiné</option>
+          </select>
+        </div>
+        <div>
           <label for="cf-message">Zpráva</label>
-          <textarea id="cf-message" name="message" required placeholder="Termín pobytu, počet osob a cokoliv dalšího, co bychom měli vědět."></textarea>
+          <textarea id="cf-message" name="message" required placeholder="Termín pobytu, dotaz nebo cokoliv dalšího, co bychom měli vědět."></textarea>
         </div>
         <div>
           <button class="btn" type="submit">Odeslat zprávu</button>

@@ -78,10 +78,9 @@
   <section class="section">
     <div class="wrap">
       <h2>כתבו לנו</h2>
-      <p class="lead">הדרך המהירה ביותר לתאם תאריכים — ההודעה תגיע ישירות לתיבת הדואר שלנו.</p>
+      <p class="lead">בין אם תרצו לבדוק תאריכים פנויים, לשאול משהו, או סתם לכתוב לנו כמה מילים — ההודעה תגיע ישירות לתיבת הדואר שלנו.</p>
       <form class="contact-form" id="contactForm" style="margin-top:22px">
         <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
-        <input type="hidden" name="subject" value="הודעה חדשה מהאתר של ANDE 1403">
         <input type="hidden" name="from_name" value="ANDE 1403 · אתר">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div>
@@ -93,8 +92,16 @@
           <input type="email" id="cf-email" name="email" autocomplete="email" required>
         </div>
         <div>
+          <label for="cf-subject">נושא ההודעה</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="הזמנת שהות – ANDE 1403">הזמנת שהות</option>
+            <option value="שאלה – ANDE 1403">שאלה</option>
+            <option value="אחר – ANDE 1403">אחר</option>
+          </select>
+        </div>
+        <div>
           <label for="cf-message">הודעה</label>
-          <textarea id="cf-message" name="message" required placeholder="תאריכי השהות, מספר אורחים וכל דבר נוסף שכדאי שנדע."></textarea>
+          <textarea id="cf-message" name="message" required placeholder="תאריכי השהות, שאלה או כל דבר נוסף שכדאי שנדע."></textarea>
         </div>
         <div>
           <button class="btn" type="submit">שליחת הודעה</button>

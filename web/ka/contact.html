@@ -78,10 +78,9 @@
   <section class="section">
     <div class="wrap">
       <h2>მოგვწერეთ</h2>
-      <p class="lead">ყველაზე სწრაფი გზა თარიღების შესათანხმებლად — შეტყობინება პირდაპირ ჩვენს ფოსტაზე მოვა.</p>
+      <p class="lead">გინდათ გაიგოთ თავისუფალი თარიღების შესახებ, რაიმეს გვკითხოთ, თუ უბრალოდ დაგვიწეროთ — შეტყობინება პირდაპირ ჩვენს ფოსტაზე მოვა.</p>
       <form class="contact-form" id="contactForm" style="margin-top:22px">
         <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
-        <input type="hidden" name="subject" value="ახალი შეტყობინება ANDE 1403-ის საიტიდან">
         <input type="hidden" name="from_name" value="ANDE 1403 · საიტი">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div>
@@ -93,8 +92,16 @@
           <input type="email" id="cf-email" name="email" autocomplete="email" required>
         </div>
         <div>
+          <label for="cf-subject">შეტყობინების თემა</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="ჯავშანი – ANDE 1403">ჯავშანი</option>
+            <option value="კითხვა – ANDE 1403">კითხვა</option>
+            <option value="სხვა – ANDE 1403">სხვა</option>
+          </select>
+        </div>
+        <div>
           <label for="cf-message">შეტყობინება</label>
-          <textarea id="cf-message" name="message" required placeholder="ჩამოსვლის თარიღები, სტუმრების რაოდენობა და ყველაფერი, რაც კარგი იქნება რომ ვიცოდეთ."></textarea>
+          <textarea id="cf-message" name="message" required placeholder="ჩამოსვლის თარიღები, კითხვა ან ყველაფერი სხვა, რაც კარგი იქნება რომ ვიცოდეთ."></textarea>
         </div>
         <div>
           <button class="btn" type="submit">გაგზავნა</button>

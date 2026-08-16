@@ -78,10 +78,9 @@
   <section class="section">
     <div class="wrap">
       <h2>Napisz do nas</h2>
-      <p class="lead">Najszybszy sposób, żeby ustalić termin — wiadomość trafi bezpośrednio na naszą skrzynkę.</p>
+      <p class="lead">Niezależnie, czy chcecie sprawdzić wolny termin, o coś zapytać, czy po prostu napisać kilka słów — wiadomość trafi bezpośrednio na naszą skrzynkę.</p>
       <form class="contact-form" id="contactForm" style="margin-top:22px">
         <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
-        <input type="hidden" name="subject" value="Nowa wiadomość ze strony ANDE 1403">
         <input type="hidden" name="from_name" value="ANDE 1403 · strona">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div>
@@ -93,8 +92,16 @@
           <input type="email" id="cf-email" name="email" autocomplete="email" required>
         </div>
         <div>
+          <label for="cf-subject">Temat wiadomości</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="Rezerwacja pobytu – ANDE 1403">Rezerwacja pobytu</option>
+            <option value="Zapytanie – ANDE 1403">Zapytanie</option>
+            <option value="Inne – ANDE 1403">Inne</option>
+          </select>
+        </div>
+        <div>
           <label for="cf-message">Wiadomość</label>
-          <textarea id="cf-message" name="message" required placeholder="Termin pobytu, liczba osób i wszystko inne, co powinniśmy wiedzieć."></textarea>
+          <textarea id="cf-message" name="message" required placeholder="Termin pobytu, pytanie albo cokolwiek innego, co powinniśmy wiedzieć."></textarea>
         </div>
         <div>
           <button class="btn" type="submit">Wyślij wiadomość</button>

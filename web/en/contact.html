@@ -79,10 +79,9 @@
   <section class="section">
     <div class="wrap">
       <h2>Write to us</h2>
-      <p class="lead">The fastest way to arrange dates — your message goes straight to our inbox.</p>
+      <p class="lead">Whether you'd like to check availability, ask a question, or just say hello — your message goes straight to our inbox.</p>
       <form class="contact-form" id="contactForm" style="margin-top:22px">
         <input type="hidden" name="access_key" value="ee755a61-b3f7-47c4-8327-cf541c65420a">
-        <input type="hidden" name="subject" value="New message from the ANDE 1403 website">
         <input type="hidden" name="from_name" value="ANDE 1403 · website">
         <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
         <div>
@@ -94,8 +93,16 @@
           <input type="email" id="cf-email" name="email" autocomplete="email" required>
         </div>
         <div>
+          <label for="cf-subject">Subject</label>
+          <select id="cf-subject" name="subject" required>
+            <option value="Booking inquiry – ANDE 1403">Booking inquiry</option>
+            <option value="Question – ANDE 1403">Question</option>
+            <option value="Other – ANDE 1403">Other</option>
+          </select>
+        </div>
+        <div>
           <label for="cf-message">Message</label>
-          <textarea id="cf-message" name="message" required placeholder="Stay dates, number of guests, and anything else we should know."></textarea>
+          <textarea id="cf-message" name="message" required placeholder="Stay dates, a question, or anything else we should know."></textarea>
         </div>
         <div>
           <button class="btn" type="submit">Send message</button>
